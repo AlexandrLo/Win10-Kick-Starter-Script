@@ -13,6 +13,8 @@
 
 This is a PowerShell script for automation of routine tasks done after fresh installations of Windows 10 and Windows Server 2016 / 2019. This is by no means any complete set of all existing Windows tweaks and neither is it another "antispying" type of script. It's simply a setting which I like to use and which in my opinion make the system less obtrusive.
 
+This repository is a fork of Disassembler0's [original script](https://github.com/Disassembler0/Win10-Initial-Setup-Script) with additional tweaks for automated install of chocolatey packages.
+
 &nbsp;
 
 ## Usage
@@ -167,6 +169,14 @@ If you'd like to store output from the script execution, you can do so using `-l
     powershell.exe -NoProfile -ExecutionPolicy Bypass -File Win10.ps1 -include Win10.psm1 -preset mypreset.txt -log myoutput.log
 
 The logging is done using PowerShell `Start-Transcript` cmdlet, which writes extra information about current environment (date, machine and user name, command used for execution etc.) to the beginning of the file and logs both standard output and standard error streams.
+
+### Chocolatey packages
+
+The tweak library for this fork contains tweaks `InstallChocoWithPackages` and `UninstallChocoWithPackages` for installing apps through Chocolatey and uninstalling Chocolatey with all packages respectively.
+
+`InstallChocoWithPackages` installs Chocolatey if not installed, and after that installs packages from [Packages.config](https://chocolatey.org/docs/commandsinstall#packagesconfig).
+`UninstallChocoWithPackages` will remove Chocolatey and all packages, software, and configurations in the Chocolatey Installation folder from your machine. This is very destructive. Do not run this tweak unless you completely understand what the intention of this tweak is and are good with it. It may have varied results on different 
+machines in the same environment. 
 
 ## Maintaining own forks
 
