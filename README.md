@@ -175,6 +175,7 @@ The logging is done using PowerShell `Start-Transcript` cmdlet, which writes ext
 The tweak library for this fork contains tweaks `InstallChocoWithPackages` and `UninstallChocoWithPackages` for installing apps through Chocolatey and uninstalling Chocolatey with all packages respectively.
 
 `InstallChocoWithPackages` installs Chocolatey if not installed, and after that installs packages from [Packages.config](https://chocolatey.org/docs/commandsinstall#packagesconfig).
+
 `UninstallChocoWithPackages` will remove Chocolatey and all packages, software, and configurations in the Chocolatey Installation folder from your machine. This is very destructive. Do not run this tweak unless you completely understand what the intention of this tweak is and are good with it. It may have varied results on different 
 machines in the same environment. 
 
