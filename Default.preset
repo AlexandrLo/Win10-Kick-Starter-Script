@@ -255,6 +255,9 @@ RemoveFaxPrinter                # AddFaxPrinter
 # UnpinStartMenuTiles
 # UnpinTaskbarIcons
 
+### Packages ###
+InstallChocoWithPackages      # UninstallChocoWithPackages
+
 ### Auxiliary Functions ###
 WaitForKey
 Restart
