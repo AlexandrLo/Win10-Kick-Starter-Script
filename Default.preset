@@ -256,7 +256,10 @@ RemoveFaxPrinter                # AddFaxPrinter
 # UnpinTaskbarIcons
 
 ### Packages ###
-InstallChocoWithPackages      # UninstallChocoWithPackages
+# InstallChocoWithPackages      # UninstallChocoWithPackages
+
+### Activation ###
+# InstallKMSActivation          # UninstallKMSActivation
 
 ### Auxiliary Functions ###
 WaitForKey
