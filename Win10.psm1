@@ -4212,6 +4212,35 @@ Function UninstallChocoWithPackages {
 
 
 ##########
+#region Activation
+##########
+
+# Install online KMS activation for Windows and Office with renewal task
+Function InstallKMSActivation {
+	$scriptPath = $PSScriptRoot
+
+	Write-Output "Activating Windows and Office..."
+	cmd.exe /c "$scriptPath\online-kms\Activate.cmd /u"
+
+	Write-Output "Creating activation and renewal task..."
+	cmd.exe /c "$scriptPath\online-kms\Renewal_Setup.cmd /rat"
+}
+
+# Uninstall Windows and Office online KMS activation and delete renewal tasks
+Function UninstallKMSActivation {
+	$scriptPath = $PSScriptRoot
+
+	Write-Output "Uninstalling Windows and Office activation..."
+	cmd.exe /c "$scriptPath\online-kms\Uninstall.cmd /u"
+}
+
+##########
+#endregion Activation
+##########
+
+
+
+##########
 #region Auxiliary Functions
 ##########
 
