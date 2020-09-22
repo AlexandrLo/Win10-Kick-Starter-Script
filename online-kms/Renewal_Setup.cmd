@@ -32,7 +32,6 @@
 
 ::========================================================================================================================================
 
-cls
 set Unattended=
 set _args=
 set _elev=
@@ -171,9 +170,6 @@ set "key=HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Schedule\taskcache\ta
 
 :ActivationRenewal
 
-cls
-title Online KMS Activation Renewal
-mode con cols=98 lines=30
 set ActTask=
 set error_=
 set DelDeskCont=
@@ -215,7 +211,6 @@ if errorlevel 1 goto:Task
 
 :Task
 
-cls
 if defined ActTask (
 title  Create Renewal And Activation Tasks
 ) else (
@@ -335,7 +330,6 @@ goto Done
 
 :ContextMenu
 
-cls
 title Add Desktop Context Menu
 
 If exist "%ProgramData%\Online_KMS_Activation.cmd" (

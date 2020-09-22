@@ -37,8 +37,6 @@
 
 ::========================================================================================================================================
 
-cls
-title Online KMS Complete Uninstall
 set Unattended=
 set _args=
 set _elev=
@@ -132,7 +130,6 @@ goto UN_Done
 
 ::========================================================================================================================================
 
-mode con: cols=98 lines=30
 setlocal EnableDelayedExpansion
 set "key=HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Schedule\taskcache\tasks"
 

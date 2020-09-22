@@ -75,8 +75,6 @@ set KMS_Port=1688
 
 ::========================================================================================================================================
 
-cls
-title  Online KMS Activation
 set Unattended=
 set _args=
 set _elev=
@@ -199,13 +197,12 @@ If defined Task call :Activation_Start & echo Exiting... & echo: & exit /b
 ::  https://stackoverflow.com/a/13351373
 ::  Written by @dbenham (stackoverflow)
 
-mode con: cols=98 lines=30
-if "!_batf!"=="%ProgramData%\Online_KMS_Activation\Activate.cmd" title  Online KMS Activation  [%ProgramData%\Online_KMS_Activation\]
-%nul% %_psc% "&{$H=get-host;$W=$H.ui.rawui;$B=$W.buffersize;$B.height=150;$W.buffersize=$B;}"
+::  mode con: cols=98 lines=30
+::  if "!_batf!"=="%ProgramData%\Online_KMS_Activation\Activate.cmd" title  Online KMS Activation  [%ProgramData%\Online_KMS_Activation\]
+::  %nul% %_psc% "&{$H=get-host;$W=$H.ui.rawui;$B=$W.buffersize;$B.height=150;$W.buffersize=$B;}"
 
 ::========================================================================================================================================
 
-cls
 setlocal
 call :Activation_Start
 @echo off
