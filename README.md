@@ -13,7 +13,7 @@
 
 This is a PowerShell script for automation of routine tasks done after fresh installations of Windows 10 and Windows Server 2016 / 2019. This is by no means any complete set of all existing Windows tweaks and neither is it another "antispying" type of script. It's simply a setting which I like to use and which in my opinion make the system less obtrusive.
 
-This repository is a fork of Disassembler0's [original script](https://github.com/Disassembler0/Win10-Initial-Setup-Script) with additional tweaks for automated install of chocolatey packages.
+This repository is a fork of Disassembler0's [original script](https://github.com/Disassembler0/Win10-Initial-Setup-Script) with additional tweaks for automated install of chocolatey packages and windows activation using [Microsoft-Activation-Scripts](https://github.com/massgravel/Microsoft-Activation-Scripts).
 
 &nbsp;
 
@@ -178,6 +178,10 @@ The tweak library for this fork contains tweaks `InstallChocoWithPackages` and `
 
 `UninstallChocoWithPackages` will remove Chocolatey and all packages, software, and configurations in the Chocolatey Installation folder from your machine. This is very destructive. Do not run this tweak unless you completely understand what the intention of this tweak is and are good with it. It may have varied results on different 
 machines in the same environment. 
+
+### Windows activation
+
+Similarly to choco tweaks `InstallKMSActivation` and `UninstallKMSActivation` tweaks were added that installs and uninstalls online KMS activation for Windows and Microsoft Office.
 
 ## Maintaining own forks
 
